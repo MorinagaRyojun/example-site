@@ -5,9 +5,16 @@ import { BrowserRouter,NavLink, Routes, Route, Link} from 'react-router-dom';
 import './HeaderBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { v4 as uuidv4 } from 'uuid';
 
 function HeaderBar() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const MenuBar = [
+    {Name:"Home",LinkTo:"/"},
+    {Name:"About",LinkTo:"/about"},
+    {Name:"Contact",LinkTo:"/contact"},
+  ]
+ 
 
 
   return (
@@ -18,15 +25,15 @@ function HeaderBar() {
       <nav className='nav'>
         <FontAwesomeIcon className='fa-bars' icon={faBars} aria-hidden="true" onClick={() => setIsExpanded(!isExpanded)} />
         <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-          <NavLink exact activeClassName="active" to="/">
-            <li>Home</li>
-          </NavLink>
-          <NavLink activeClassName="active" to="/about">
-            <li>About</li>
-          </NavLink>
-          <NavLink activeClassName="active" to="/contact">
-            <li>Contact</li>
-          </NavLink>
+
+          
+          {
+            MenuBar.map((item)=>{
+              return <NavLink to={item.LinkTo} key={uuidv4()}><li>{item.Name}</li></NavLink>
+            })
+          }
+
+
         </ul>
       </nav>
       
