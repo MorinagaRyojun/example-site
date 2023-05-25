@@ -18,19 +18,19 @@ function HeaderBar() {
     {Name:"About",LinkTo:"/about"},
     {Name:"Contact",LinkTo:"/contact"},
   ]
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true)
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY
 
-    if(currentScrollPos > prevScrollPos){
+    if(currentScrollPos > 3){
         setVisible(false)
     }else{
         setVisible(true)
     }
 
-    setPrevScrollPos(currentScrollPos)
+    // setPrevScrollPos(currentScrollPos)
   }
   useEffect( () => {
     console.log(visible)

@@ -2,8 +2,13 @@ import './HomePage.css'
 import {Container, Row, Col} from 'react-bootstrap'
 import { fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
-import Card from 'react-bootstrap/Card';
-import ForTest from '../../components/ForTest';
+
+import Stage1 from '../../components/Content/stage1';
+import Stage2 from '../../components/Content/stage2';
+
+
+import ForTest from '../../components/ForTest'
+import Img1 from './image1.png'
 
 const styles = StyleSheet.create({
   fadeIn: {
@@ -12,23 +17,21 @@ const styles = StyleSheet.create({
   }
 });
 
-const TestWord = ""
-
+const dataContent = {
+  Title1 : "ยินดีต้อนรับ",
+  Description1 : `ให้ AI จากเรา ช่วยตอบแชทสิ \n ช่วยขาย ช่วยจัดการ ตอบโจทย์ธุรกิจ`,
+  Button1 : "Click! เลย",
+  Image1 : Img1
+}
 function HomePage() {
   return (
-    <Container className='Container'>
+    <div className='Container'>
       <Row>
-        <Col className={css(styles.fadeIn)}>Home</Col>
-          <h1 className={css(styles.fadeIn)}> Ryojun</h1>
-        <Col>
-          <Card className={css(styles.fadeIn)}>
-            <Card.Body>
-              <ForTest />
-            </Card.Body>
-          </Card>
+        <Col className={css(styles.fadeIn)}>
+          <Stage1 className={css(styles.fadeIn)} title={dataContent.Title1}  description={dataContent.Description1} button={dataContent.Button1} image={dataContent.Image1}/>
         </Col>
       </Row>
-    </Container>
+    </div>
     
   );
 }

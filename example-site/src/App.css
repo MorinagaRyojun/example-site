@@ -1,7 +1,10 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'); */
 
 .App {
   text-align: center;
+}
+.main {
+  background-image: url("../public/5291450.jpg");
 }
 
 .App-logo {
@@ -39,7 +42,7 @@
   }
 }
 
-.container {
+/* .container {
   width: 80%;
   margin: 60 px auto;
-}
+} */

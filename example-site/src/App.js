@@ -9,12 +9,12 @@ import HomePage from './pages/Home/HomePage';
 
 function App() {
   return (
-    <>
+    <div className='main'>
       <HeaderBar />
       <Routes>
         <Route exact={true} path='/' element={<HomePage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

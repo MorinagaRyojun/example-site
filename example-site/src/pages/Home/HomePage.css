@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,900;1,100&display=swap');
 
+
 .Container {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 0px 100px 0px;
-    background: #f8f8f8;
+    
+
   }
 h1 {
     font-family: 'Kanit', sans-serif;
-    font-size: 100px;
     font-weight: bold;
     color: rgb(0, 200, 255);
     text-shadow: 2px 2px #2edcff;

@@ -18,7 +18,7 @@
 
   .Nav-down {
     z-index: 99;
-    background-color: #666666;
+    background-color: #ffffff;
   }
 
 
@@ -33,6 +33,7 @@
 
   .nav ul {
     display: flex;
+    list-style-type: none;
   }
 
   .nav ul li {
@@ -85,14 +86,4 @@
     ul.collapsed li:hover {
       background: #e6e6e6;
     }
-  }
-
-  .page-heading {
-    background-image: url(../../public/page-heading-bg.jpg);
-    border-radius: 0px 0px 150px 150px;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 200px 0px 100px 0px;
-    text-align: center;
   }
