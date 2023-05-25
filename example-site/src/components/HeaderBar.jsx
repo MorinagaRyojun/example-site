@@ -6,6 +6,10 @@ import './HeaderBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { v4 as uuidv4 } from 'uuid';
+import Navigation from "react-sticky-nav";
+
+
+
 
 function HeaderBar() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -14,11 +18,29 @@ function HeaderBar() {
     {Name:"About",LinkTo:"/about"},
     {Name:"Contact",LinkTo:"/contact"},
   ]
- 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true)
 
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY
+
+    if(currentScrollPos > prevScrollPos){
+        setVisible(false)
+    }else{
+        setVisible(true)
+    }
+
+    setPrevScrollPos(currentScrollPos)
+  }
+  useEffect( () => {
+    console.log(visible)
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
 
   return (
-    <div className='Navigation'>
+    <Navigation className={`Navigation ${visible ? 'Nav-up ' : 'Nav-down'} `}>
       <div className='logo'>
         <Link to="/">Ryojun</Link>
       </div>
@@ -37,7 +59,7 @@ function HeaderBar() {
         </ul>
       </nav>
       
-    </div>
+    </Navigation>
   );
 }
 

@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import { fadeIn } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 import Card from 'react-bootstrap/Card';
+import ForTest from '../../components/ForTest';
 
 const styles = StyleSheet.create({
   fadeIn: {
@@ -10,6 +11,8 @@ const styles = StyleSheet.create({
     animationDuration: '1s',
   }
 });
+
+const TestWord = ""
 
 function HomePage() {
   return (
@@ -20,7 +23,7 @@ function HomePage() {
         <Col>
           <Card className={css(styles.fadeIn)}>
             <Card.Body>
-              With supporting text below as a natural lead-in to additional content.
+              <ForTest />
             </Card.Body>
           </Card>
         </Col>
