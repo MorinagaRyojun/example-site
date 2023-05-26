@@ -19,7 +19,7 @@ function Stage1(props) {
                     
             </Col>
             <Col sm={4}>
-                <img className='Image' src={props.image} />
+                <img className='Image' src={props.image} alt="dummy for testing"/>
             </Col>
         </Row>
         

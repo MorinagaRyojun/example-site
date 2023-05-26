@@ -7,21 +7,22 @@ function Stage2(props) {
     return (
         <>
         <Container className='stage2'>
-        <Row className='mt-4 mb-3'>
-            <Col sm={8}>
-                <h1>{props.title}</h1>
-                <p className='description'>
-                    {props.description}
-                </p>
-                {props.button != null &&
-                    <Button variant="primary" size='lg'>{props.button}</Button>
-                }
-                    
-            </Col>
-            <Col sm={4}>
-                <img className='Image' src={props.image} />
-            </Col>
-        </Row>
+            <Row className='me-3 mt-4 mb-3'>
+                <Col className='leftImg' sm={6}>
+                    <img className='Image' src={props.image} alt="dummy for testing" />
+                </Col>
+                <Col sm={6}>
+                    <h1>{props.title}</h1>
+                    <p className='description'>
+                        {props.description}
+                    </p>
+                    {props.button != null &&
+                        <Button variant="primary" size='lg'>{props.button}</Button>
+                    }
+                        
+                </Col>
+                
+            </Row>
         
         </Container>
         </>

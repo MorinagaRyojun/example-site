@@ -1,5 +1,5 @@
 import './App.css';
-import {NavLink, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 //ImportNav
 import HeaderBar from './components/HeaderBar';

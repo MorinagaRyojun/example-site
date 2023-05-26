@@ -1,3 +1,4 @@
+
 .Container {
     margin-top: 40px;
     /* background-color: white; */
@@ -16,8 +17,9 @@
 }
 
 .stage2 {
-    background-color: rgb(255, 0, 0);
+
     align-items: center;
     width: auto;
-    display: flex;
+
 }
+
