@@ -38,9 +38,6 @@ function HomePage() {
           <Stage2 className={css(styles.fadeIn)} title={dataContent.Title1}  description={dataContent.Description1}  image={dataContent.Image1}/>
         </Col>
       </Row>
-      <Row className={css(styles.background)}>
-        <Stage2 className={css(styles.fadeIn)} title={dataContent.Title1}  description={dataContent.Description1}  image={dataContent.Image1}/>
-      </Row>
 
     </div>
     
